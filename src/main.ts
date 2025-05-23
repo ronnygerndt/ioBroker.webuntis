@@ -181,6 +181,7 @@ class Webuntis extends utils.Adapter {
                 untis.getOwnTimetableFor(this.timetableDate).then(async (timetable) => {
                     if(timetable.length > 0) {
                         this.log.debug('Timetable gefunden')
+                        this.log.debug(timetable);
 
                         await this.setTimeTable(timetable, 0);
 
